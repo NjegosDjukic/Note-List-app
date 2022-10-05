@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 const AddNote = ({notes, setNotes}) => {
-
     const date = new Date();
     const currentDate = date.getDate()+"/"+(date.getMonth()+1)+"/"+ date.getFullYear();
     const [inputValue, setInputValue] = useState('');
