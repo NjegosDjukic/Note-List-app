@@ -21,7 +21,6 @@ const App = () => {
   
   const getSearchValue = (value) => {
     setTimeout(() => setSearchValue(value),0 )
-    
   }
   const handleDarkMode = () => {
     setDarkMode(!darkMode)
