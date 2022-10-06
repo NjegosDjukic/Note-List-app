@@ -5,7 +5,7 @@ import Search from './components/Search';
 import AddNote from './components/AddNote';
 import NoteList from './components/NoteList';
 
-const getLocalItems = () => {
+const getNotesFromLocalStorage = () => {
   const notes = localStorage.getItem('note');
   if(notes) {
     return JSON.parse(localStorage.getItem('note'));
@@ -13,10 +13,15 @@ const getLocalItems = () => {
     return [];
   }
 }
-
+const getDarkModeFromLocalStorage = () => {
+  const darkMode = localStorage.getItem('dark-mode');
+  if(darkMode) {
+    return JSON.parse(localStorage.getItem('dark-mode'));
+  }
+}
 const App = () => {
-  const [notes, setNotes] = useState(getLocalItems());
-  const [darkMode, setDarkMode] = useState(false);
+  const [notes, setNotes] = useState(getNotesFromLocalStorage());
+  const [darkMode, setDarkMode] = useState(getDarkModeFromLocalStorage());
   const [searchValue, setSearchValue] = useState();
   
   const getSearchValue = (value) => {
@@ -24,8 +29,9 @@ const App = () => {
   }
   const handleDarkMode = () => {
     setDarkMode(!darkMode)
+    localStorage.setItem('dark-mode',JSON.stringify(darkMode))
   }
-
+  useEffect(() => localStorage.setItem('dark-mode',JSON.stringify(darkMode)), [darkMode] )
   useEffect(() => localStorage.setItem('note', JSON.stringify(notes)), [notes]);
 
   return (
