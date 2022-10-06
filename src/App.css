@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: center;
 }
+.wrapper{
+  width: 60%;
+}
 header{
   display: flex;
   justify-content: space-between;
@@ -32,17 +35,17 @@ button{
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .note, .add-note{
-  width: 30%;
+  width: 32%;
   background-color: #20ad75;
   border-radius: 10px;
   height: 170px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin: 10px;
+  margin: 5px;
 }
 .add-note{
   align-items: center;
@@ -95,4 +98,23 @@ textarea{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media only screen and (max-width: 800px) {
+  .note, .add-note{
+    width: 40%;
+  }
+  .notes-wrap{
+    justify-content: space-around;
+  }
+ .search-field{
+  margin: 20px 0;
+  width: 90%;
+ }
+ .wrapper{
+  width: 100%;
+ }
+ header{
+  width: 90%;
+  margin: auto;
+ }
 }

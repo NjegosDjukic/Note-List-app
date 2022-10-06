@@ -20,9 +20,9 @@ const App = () => {
   const [searchValue, setSearchValue] = useState();
   
   const getSearchValue = (value) => {
-    setSearchValue(value);
+    setTimeout(() => setSearchValue(value),0 )
+    
   }
-  
   const handleDarkMode = () => {
     setDarkMode(!darkMode)
   }
@@ -31,7 +31,7 @@ const App = () => {
 
   return (
     <div className='body' style={{backgroundColor: darkMode ? '#293045' : '#fff'}}>
-      <div style={{width:'50%'}}>
+      <div className='wrapper'>
         <Header handleDarkMode={handleDarkMode} />
         <Search getSearchValue={getSearchValue} />
         <div className='notes-wrap'>
