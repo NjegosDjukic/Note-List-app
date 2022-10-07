@@ -1,5 +1,5 @@
 const Header = ({handleDarkMode}) => {
-
+  
   return (
     <header>
       <h1><span style={{color: 'green'}}>React</span> Notes</h1>
