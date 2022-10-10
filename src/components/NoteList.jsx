@@ -1,9 +1,10 @@
 import Note from './Note';
+import AddNote from './AddNote';
 
 const NoteList = ({notes, setNotes, searchValue}) => {
  
   return (
-    <>
+    <div className='notes-wrap'>
       {notes.filter((note) => note.noteBody.toLowerCase().includes(searchValue))
         .map((note) => (
           <Note 
@@ -15,7 +16,9 @@ const NoteList = ({notes, setNotes, searchValue}) => {
             setNotes={setNotes}
           />
         ))}
-    </>
+        <AddNote notes={notes} setNotes={setNotes}  />
+    </div>
+    
   )
 }
 export default NoteList;

@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Search from './components/Search';
-import AddNote from './components/AddNote';
 import NoteList from './components/NoteList';
 
 const getNotesFromLocalStorage = () => {
@@ -38,16 +37,14 @@ const App = () => {
       <div className='wrapper'>
         <Header handleDarkMode={handleDarkMode} />
         <Search getSearchValue={getSearchValue} />
-        <div className='notes-wrap'>
           <NoteList 
             notes={notes} 
             setNotes={setNotes} 
             searchValue={searchValue} 
             setSearchValue={setSearchValue}
           />
-          <AddNote notes={notes} setNotes={setNotes}  />
+          
         </div>
-      </div>
     </div>
   );
 }

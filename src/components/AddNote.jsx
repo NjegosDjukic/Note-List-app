@@ -16,9 +16,9 @@ const AddNote = ({notes, setNotes}) => {
     const handleAddNote = (e) => {
         e.preventDefault();
         if(newNote.noteBody !== ''){
-             setNotes([...notes,newNote]);
-             setInputValue('');
-             e.target.reset();
+            setNotes([...notes,newNote]);
+            setInputValue('');
+            e.target.reset();
         }
     }
   return (

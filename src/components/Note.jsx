@@ -7,7 +7,7 @@ const Note = ({noteBody,date, id, setNotes, notes}) => {
    setNotes(notes.filter(note => note.id !== id));
   }
   return (
-    <div className='note'>
+    <div className='note' >
         <div className='note-header'>
             <span>{noteBody}</span>
         </div>

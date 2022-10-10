@@ -3,6 +3,7 @@ import { useState } from 'react';
 const Search = ({getSearchValue}) => {
   const [searchValue, setSearchValue] = useState('');
   getSearchValue(searchValue)
+  
 return (
     <div style={{display: 'flex',alignItems: 'center', justifyContent: 'center'}}>
       <input 
