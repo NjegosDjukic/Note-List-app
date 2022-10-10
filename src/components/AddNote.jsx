@@ -22,7 +22,7 @@ const AddNote = ({notes, setNotes}) => {
         }
     }
   return (
-    <div className='add-note'>
+    <div className='add-note' style={{flexGrow: notes.length === 0 || notes.length ===1  ? '1' : '0'}}>
         <form onSubmit={handleAddNote}>
             <textarea 
                 placeholder='Type to add a new note' 
