@@ -18,7 +18,6 @@ const NoteList = ({notes, setNotes, searchValue}) => {
         ))}
         <AddNote notes={notes} setNotes={setNotes}  />
     </div>
-    
   )
 }
 export default NoteList;

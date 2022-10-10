@@ -3,21 +3,8 @@ import './App.css';
 import Header from './components/Header';
 import Search from './components/Search';
 import NoteList from './components/NoteList';
+import { getDarkModeFromLocalStorage, getNotesFromLocalStorage } from './get-items';
 
-const getNotesFromLocalStorage = () => {
-  const notes = localStorage.getItem('note');
-  if(notes) {
-    return JSON.parse(localStorage.getItem('note'));
-  } else {
-    return [];
-  }
-}
-const getDarkModeFromLocalStorage = () => {
-  const darkMode = localStorage.getItem('dark-mode');
-  if(darkMode) {
-    return JSON.parse(localStorage.getItem('dark-mode'));
-  }
-}
 const App = () => {
   const [notes, setNotes] = useState(getNotesFromLocalStorage());
   const [darkMode, setDarkMode] = useState(getDarkModeFromLocalStorage());
@@ -43,7 +30,6 @@ const App = () => {
             searchValue={searchValue} 
             setSearchValue={setSearchValue}
           />
-          
         </div>
     </div>
   );
