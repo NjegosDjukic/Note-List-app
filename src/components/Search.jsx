@@ -1,18 +1,22 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { AiOutlineSearch } from 'react-icons/ai';
 
 const Search = ({getSearchValue}) => {
   const [searchValue, setSearchValue] = useState('');
-  getSearchValue(searchValue)
+  
+  useEffect(() => getSearchValue(searchValue),[searchValue])
   
 return (
-    <div style={{display: 'flex',alignItems: 'center', justifyContent: 'center'}}>
-      <input 
-        type='search' 
-        className='search-field' 
-        placeholder= 'Search for your notes'
-        onChange={e => setSearchValue(e.target.value)} 
-      />
-    </div>
+      <div className='search-wrap' >
+        <div style={{display: 'flex', alignItems: 'center'}}>
+          <AiOutlineSearch className='icon'/>
+        </div>
+        <input
+          type='text' 
+          placeholder='Search for your notes' 
+          onChange={e => setSearchValue(e.target.value)}
+        />
+      </div>
   )
 }
 export default Search;

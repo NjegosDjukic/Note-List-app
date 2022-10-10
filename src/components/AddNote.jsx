@@ -11,7 +11,7 @@ const AddNote = ({notes, setNotes}) => {
         noteBody: inputValue,
         date : currentDate
     }
-    const letterCounter = 350 - inputValue.length;
+    const letterCounter = 300 - inputValue.length;
 
     const handleAddNote = (e) => {
         e.preventDefault();
@@ -26,12 +26,12 @@ const AddNote = ({notes, setNotes}) => {
         <form onSubmit={handleAddNote}>
             <textarea 
                 placeholder='Type to add a new note' 
-                maxLength={350} 
+                maxLength={300} 
                 onChange={(e) => setInputValue(e.target.value)} 
             />
             <div className='add-note-footer'>
                 <span style={{fontSize: '14px'}}>{letterCounter} remaining</span>
-                <button style={{borderRadius: '20px'}} >Save</button>
+                <button type='submit'>Save</button>
             </div>
         </form>
     </div>
