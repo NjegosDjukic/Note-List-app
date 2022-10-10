@@ -29,7 +29,6 @@ const App = () => {
   }
   const handleDarkMode = () => {
     setDarkMode(!darkMode)
-    localStorage.setItem('dark-mode',JSON.stringify(darkMode))
   }
   useEffect(() => localStorage.setItem('dark-mode',JSON.stringify(darkMode)), [darkMode] )
   useEffect(() => localStorage.setItem('note', JSON.stringify(notes)), [notes]);
