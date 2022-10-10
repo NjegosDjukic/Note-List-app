@@ -108,3 +108,29 @@ textarea{
   height: 50%;
   background-color: #20ad75;
 }
+@media only screen and (max-width: 1400px){
+  .note{
+    flex-basis: 30%;
+  }
+}
+@media only screen and (max-width: 1000px){
+  .note{
+    flex-grow: 1;
+  }
+  .add-note{
+    flex-basis: 45%;
+  }
+  
+}
+@media only screen and (max-width: 800px) {
+  .wrapper{
+    width: 100%;
+  }
+  header, .search-wrap, .notes-wrap{
+    width: 90%;
+    margin: auto;
+  }
+  .note, .add-note{
+    flex-basis: 40%;
+  }
+}
