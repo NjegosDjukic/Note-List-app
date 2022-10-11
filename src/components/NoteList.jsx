@@ -16,7 +16,7 @@ const NoteList = ({notes, setNotes, searchValue}) => {
             setNotes={setNotes}
           />
         ))}
-        <AddNote notes={notes} setNotes={setNotes}  />
+      <AddNote notes={notes} setNotes={setNotes}  />
     </div>
   )
 }

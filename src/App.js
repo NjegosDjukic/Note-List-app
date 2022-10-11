@@ -24,13 +24,13 @@ const App = () => {
       <div className='wrapper'>
         <Header handleDarkMode={handleDarkMode} />
         <Search getSearchValue={getSearchValue} />
-          <NoteList 
-            notes={notes} 
-            setNotes={setNotes} 
-            searchValue={searchValue} 
-            setSearchValue={setSearchValue}
-          />
-        </div>
+        <NoteList 
+          notes={notes} 
+          setNotes={setNotes} 
+          searchValue={searchValue} 
+          setSearchValue={setSearchValue}
+        />
+      </div>
     </div>
   );
 }
